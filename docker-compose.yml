@@ -1,25 +1,23 @@
 version: "3.9"
 services:
-    backend:
-        container_name: gg-backend
-        build:
-            context: ./global-getaways-backend
-            dockerfile: Dockerfile
-        ports:
-            - "8080:8080"
-        volumes:
-            - .:/backend
-            - logvolume01:/var/backend/log
-    frontend:
-        container_name: gg-frontend
-        build:
-            context: ./global-getaways-frontend
-            dockerfile: Dockerfile
-        ports:
-            - "3000:3000"
-        volumes:
-            - .:/frontend
-            - logvolume02:/var/frontend/log
-volumes:
-    logvolume01: {}
-    logvolume02: {}
+  ggb:
+    container_name: ggb
+    build:
+      context: ./ggb
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - gg
+  ggf:
+    container_name: ggf
+    build:
+      context: ./ggf
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - gg
+
+networks:
+  gg:
