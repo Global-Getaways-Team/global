@@ -26,12 +26,12 @@
 		const countryLength = getLength(blog.country);
 
 		if (!(titleLength < 10 && titleLength >= 1)) {
-			err = Error("Der Titel darf mindestens ein, jedoch maximal zehn Wörter beinhalten.");
+			err = Error("Der Titel muss mindestens ein und darf maximal zehn Wörter beinhalten.");
 			return false;
 		}
 
 		if (cityLength == 0) {
-			err = Error("Nur ein Standard darf angegeben werden.");
+			err = Error("Nur eine Stadt darf angegeben werden. Für Städtebezeichnungen die aus mehreren Wörtern bestehen, bitte Bindestriche verwenden.");
 			return false;
 		}
 
@@ -48,7 +48,7 @@
 		}
 
 		if (!(bodyLength < 500 && bodyLength >= 100)) {
-			err = Error("Der Blogbeitrag darf aus mindestens 100 und maximal 500 Wörtern bestehen.");
+			err = Error("Der Blogbeitrag muss mindestens 100 und darf maximal 500 Wörtern beinhalten.");
 			return false;
 		}
 
@@ -91,7 +91,7 @@
 {#if succ}
 	<section class="my-2 bg-green text-accent p-2 rounded-lg ">
 		<h3>
-			Dein Blog wurde kreiert. Besuche <a href="/blog">die Blogbeiträge</a> um deinen und alle anderen zu erkunden.
+			Dein Blog wurde kreiert. Besuche die Seite der <a class="underline-offset-1" href="/blog">Blogbeiträge</a> um deinen und alle anderen zu erkunden.
 		</h3>
 	</section>
 {/if}
@@ -101,7 +101,7 @@
 		type="text"
 		id="text"
 		placeholder="Titel"
-		class="outline-none font-sans mt-4 text-xl border-b-1"
+		class="outline-none font-sans mt-4 text-xl border-b-2"
 		minlength="1"
 		bind:value={blog.title}
 	/>
@@ -110,7 +110,7 @@
 		type="text"
 		id="text"
 		placeholder="Berlin"
-		class="outline-none font-sans mt-4 text-xl border-b-1"
+		class="outline-none font-sans mt-4 text-xl border-b-2"
 		bind:value={blog.city}
 	/>
 
@@ -118,7 +118,7 @@
 		type="text"
 		id="text"
 		placeholder="Deutschland"
-		class="outline-none font-sans mt-4 text-xl border-b-1"
+		class="outline-none font-sans mt-4 text-xl border-b-2"
 		bind:value={blog.country}
 	/>
 
@@ -126,7 +126,7 @@
 		type="text"
 		id="image"
 		placeholder="www.unsplash.com/some/picture"
-		class="outline-none font-sans mt-4 text-xl border-b-1"
+		class="outline-none font-sans mt-4 text-xl border-b-2"
 		bind:value={blog.image}
 	/>
 
