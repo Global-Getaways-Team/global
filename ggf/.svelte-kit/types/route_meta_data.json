@@ -1,0 +1,18 @@
+{
+	"/": [
+		"src/routes/+page.ts"
+	],
+	"/about": [
+		"src/routes/about/+page.ts"
+	],
+	"/blog": [
+		"src/routes/blog/+page.ts"
+	],
+	"/blog/create": [],
+	"/blog/[id]": [
+		"src/routes/blog/[id]/+page.ts"
+	],
+	"/favorites": [
+		"src/routes/favorites/+page.ts"
+	]
+}
