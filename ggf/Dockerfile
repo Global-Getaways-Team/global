@@ -2,7 +2,7 @@ FROM node as builder
 
 WORKDIR /app
 
-COPY package*.json .
+COPY *.json .
 
 RUN npm install
 

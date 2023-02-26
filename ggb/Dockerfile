@@ -5,6 +5,7 @@ WORKDIR /app
 COPY . .
 
 RUN npm install
+
 RUN npm run compile
 
 FROM node
@@ -18,3 +19,5 @@ COPY --from=builder /app/.env .
 COPY --from=builder /app/dist ./dist
 
 CMD ["node", "dist/app.js"]
+
+

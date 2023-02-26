@@ -16,8 +16,9 @@
 		{/each}
 	</div>
 {:else}
-	<span class="font-sans text-black text-xl"
-		>Keine Blogbeiträge erstellt. Fange mit deinem ersten
-		<a href="/blog/create" class="font-sans text-red">an</a>
+	<span class="font-sans text-black text-xl">
+    Keine Blogbeiträge erstellt. Fange mit deinem
+    <a href="/blog/create" class="font-sans text-red">Ersten</a>
+    an.
 	</span>
 {/if}

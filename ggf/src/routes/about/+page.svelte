@@ -7,8 +7,8 @@
 	const sections: Section[] = [
 		{
 			title: "Über uns",
-			body: `Hallo, wir sind die HaWaRieties! HWR-Studenten, die in ihren Ferien zu viele Orte besucht
-			haben. Wenn du mehr über uns und den Nutzen unserer Webseite wissen möchtest, dann empfehlen wir dir, die
+			body: `Hallo, wir sind die HaWaRieties!
+      HWR-Studenten, die in ihren Ferien zu viele Orte besucht haben. Wenn du mehr über uns und den Nutzen unserer Webseite wissen möchtest, dann empfehlen wir dir, die
 			<a href="/blog">Blogbeiträge</a> zu lesen.`
 		},
 		{
