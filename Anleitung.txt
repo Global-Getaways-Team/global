@@ -1,0 +1,4 @@
+1. Repository auf GitGub öffnen:
+https://github.com/Global-Getaways-Team/global
+
+2. Den Schritten der README.md folgen.
