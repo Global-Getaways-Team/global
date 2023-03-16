@@ -29,3 +29,6 @@ docker-compose up
 ```
 http://localhost:5173/
 ```
+
+## 5.
+### Erst beim zweiten Klick eines erstellten Blogbeitrags, werden diese als Favoriten angezeigt.
